@@ -72,3 +72,4 @@ ScrollReveal().reveal(".about__content .about__btn", {
   ...scrollRevealOption,
   delay: 2000,
 });
+
