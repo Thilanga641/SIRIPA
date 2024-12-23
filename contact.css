@@ -25,13 +25,6 @@
   color: #ddd;
 }
 
-.border {
-  width: 100px;
-  height: 10px;
-  background: #739fcc;
-  margin: 40px auto;
-}
-
 .contact-form {
   max-width: 600px;
   width: 90%; /* Makes it responsive */
