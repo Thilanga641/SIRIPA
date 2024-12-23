@@ -20,6 +20,7 @@ menuBtn.addEventListener("click", (e) => {
   }
 });
 
+
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
@@ -73,3 +74,21 @@ ScrollReveal().reveal(".about__content .about__btn", {
   delay: 2000,
 });
 
+
+// Form toggle logic
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const switchToRegister = document.getElementById('switchToRegister');
+const switchToLogin = document.getElementById('switchToLogin');
+
+switchToRegister.onclick = () => {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+    document.getElementById('accountModalLabel').innerText = 'Register';
+};
+
+switchToLogin.onclick = () => {
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+    document.getElementById('accountModalLabel').innerText = 'Login';
+};
