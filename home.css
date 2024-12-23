@@ -15,6 +15,97 @@
   box-sizing: border-box;
 }
 
+/*Login Section*/
+@media (max-width: 767.98px) {
+  .nav__action__btn {
+    text-align: center; /* Centers the button in the parent container */
+    margin-top: 10px;   /* Adds spacing for better appearance */
+  }
+}
+
+
+.modal-content {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.modal-header {
+  border-bottom: none;
+  background: linear-gradient(90deg, #5b5c5f, #000000);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.modal-body {
+  padding: 30px;
+}
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.form-control:focus {
+  border-color: #38393b;
+  box-shadow: 0 0 10px rgba(19, 19, 19, 0.5);
+}
+
+/* Button Styling */
+.btn-primary {
+  background: linear-gradient(90deg, #424344, #444444);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #616161, #4d4d4e);
+  transform: scale(1.05);
+}
+
+/* Toggle Links Styling */
+.switch-btn a {
+  color: #303133;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.switch-btn a:hover {
+  color: #595b5e;
+}
+
+/* Animation for Modal Appearance */
+.modal.fade .modal-dialog {
+  transform: translateY(-50px);
+  transition: transform 0.5s ease-out;
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Home section Start*/
@@ -222,8 +313,20 @@ nav {
   cursor: pointer;
 }
 
+/* Ensure button is visible and responsive */
 .nav__action__btn {
-  display: none;
+  display: flex;
+  justify-content: center; /* Center it horizontally */
+  margin-top: 10px; /* Add spacing */
+}
+
+/* Customize for small screens */
+@media (max-width: 768px) {
+  .btn-responsive {
+      font-size: 14px; /* Smaller font size */
+      padding: 8px 12px; /* Adjust padding */
+      width: 100%; /* Full-width button */
+  }
 }
 
 .header__container {
