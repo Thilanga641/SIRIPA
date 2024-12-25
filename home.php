@@ -1,121 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="home.css" />
-    <title>SIRIPA</title>
-  </head>
-  <body>
-    <header class="header" id="home">
-      <div class="header__video">
-        <video autoplay loop muted playsinline class="back-video">
-          <source src="assets/1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <nav>
-        <div class="nav__bar">
-          <div class="logo nav__logo">
-            <a href="#">SIRIPA</a>
-          </div>
-          <ul class="nav__links" id="nav-links">
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#about">Discover</a></li>
-            <li><a href="uplord.html">Your Pic</a></li>
-            
-          </ul>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
-          <div class="nav__action__btn">
-            <button class="btn btn-outline-light btn-responsive" data-bs-toggle="modal" data-bs-target="#accountModal">
-                ACCOUNT
-            </button>
-        </div>
-        </div>
-      </nav>
-
-      <!--Login Details Added-->
-      <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="accountModalLabel">Login</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Login Form -->
-                    <div id="loginForm">
-                        <form>
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Login</button>
-                        </form>
-                        <div class="switch-btn text-center mt-3">
-                            <p>Don't have an account? <a href="javascript:void(0);" id="switchToRegister">Register</a></p>
-                        </div>
-                    </div>
-                    <!-- Register Form -->
-                    <div id="registerForm" style="display: none;">
-                        <form>
-                            <div class="mb-3">
-                                <label for="registerEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="registerUsername" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="registerUsername" placeholder="Enter your username">
-                            </div>
-                            <div class="mb-3">
-                                <label for="registerPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="registerPassword" placeholder="Enter your password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Register</button>
-                        </form>
-                        <div class="switch-btn text-center mt-3">
-                            <p>Already have an account? <a href="javascript:void(0);" id="switchToLogin">Login</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <title>SIRIPA</title>
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="header__video">
+      <video autoplay loop muted playsinline class="back-video">
+        <source src="assets/1.mp4" type="video/mp4" />
+      </video>
     </div>
- 
+    <nav>
+      <div class="nav__bar">
+        <div class="logo nav__logo">
+          <a href="#">SIRIPA</a>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#about">Discover</a></li>
+          <li><a href="uplord.html">Your Pic</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+        <div class="nav__action__btn">
+          <button class="btn btn-outline-light btn-responsive" data-bs-toggle="modal" data-bs-target="#accountModal">
+            ACCOUNT
+          </button>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Login and Signup Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="accountModalLabel">Login</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Login Form -->
+            <div id="loginForm">
+              <form action="account_handler.php" method="POST">
+                <input type="hidden" name="action" value="login">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+              </form>
+              <div class="switch-btn text-center mt-3">
+                <p>Don't have an account? <a href="javascript:void(0);" id="switchToRegister">Register</a></p>
+              </div>
+            </div>
 
-
-
-      <div class="section__container header__container">
-        <div class="header__content">
-          <h3 class="section__subheader">A HIKING GUIDE</h3>
-          <h1 class="section__header">
-            Sri Lanka's sacred mountain,<br />famed for spirituality and views.
-          </h1>
-          <div class="scroll__btn">
-            <a href="#about">
-              Scroll down
-              <span><i class="ri-arrow-down-line"></i></span>
-            </a>
+            <!-- Signup Form -->
+            <div id="registerForm" style="display: none;">
+              <form action="account_handler.php" method="POST">
+                <input type="hidden" name="action" value="register">
+                <div class="mb-3">
+                  <label for="registerEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" id="registerEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="registerUsername" class="form-label">Username</label>
+                  <input type="text" class="form-control" name="registerUsername" id="registerUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="registerPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="registerPassword" id="registerPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="mb-3">
+                  <label for="confirmPassword" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+              </form>
+              <div class="switch-btn text-center mt-3">
+                <p>Already have an account? <a href="javascript:void(0);" id="switchToLogin">Login</a></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+
+    <!-- Header Content -->
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h3 class="section__subheader">A HIKING GUIDE</h3>
+        <h1 class="section__header">
+          Sri Lanka's sacred mountain,<br />famed for spirituality and views.
+        </h1>
+        <div class="scroll__btn">
+          <a href="#about">
+            Scroll down
+            <span><i class="ri-arrow-down-line"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
     <br /><br /><br />
     <section class="about">
@@ -276,6 +273,6 @@ Another special thing here is the presence of very large fruit orchards.
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="home.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
