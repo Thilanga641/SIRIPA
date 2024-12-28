@@ -137,7 +137,7 @@
           </div>
         </div>
         <div class="about__image about__image-2" id="equipment">
-          <img src="assets/2.jpg" alt="about" />
+          <img src="assets/3.png" alt="about" />
         </div>
         <div class="about__content about__content-2">
           <h3 class="section__subheader">Kuruwita Erathna Road</h3>
@@ -156,7 +156,7 @@
           </div>
         </div>
         <div class="about__image about__image-3" id="blog">
-          <img src="assets/3.png" alt="about" />
+          <img src="assets/2.jpg" alt="about" />
         </div>
         <div class="about__content about__content-3">
           <h3 class="section__subheader">Ratnapura Palabaddala Road</h3>
