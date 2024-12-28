@@ -3,11 +3,14 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
-const switchToRegister = document.getElementById('switchToRegister');
-const switchToLogin = document.getElementById('switchToLogin');
-const accountButton = document.getElementById('accountButton');
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const switchToRegister = document.getElementById("switchToRegister");
+const switchToLogin = document.getElementById("switchToLogin");
+const accountButton = document.getElementById("accountButton");
+
+const signupButton = document.getElementById("signupButton");
+const signupForm = document.getElementById("signupForm");
 
 // Toggle Navigation Menu
 menuBtn.addEventListener("click", () => {
@@ -63,36 +66,33 @@ switchToLogin.addEventListener("click", () => {
 
 function toggleForms(formType) {
   if (formType === "register") {
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
-    document.getElementById('accountModalLabel').innerText = 'Register';
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+    document.getElementById("accountModalLabel").innerText = "Register";
   } else {
-    registerForm.style.display = 'none';
-    loginForm.style.display = 'block';
-    document.getElementById('accountModalLabel').innerText = 'Login';
+    registerForm.style.display = "none";
+    loginForm.style.display = "block";
+    document.getElementById("accountModalLabel").innerText = "Login";
   }
 }
 
 // Login Form Submission
-loginForm.addEventListener('submit', function (e) {
+loginForm.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent form submission
 
-  const username = document.getElementById('usernameInput').value;
+  const username = document.getElementById("usernameInput").value;
 
   if (username) {
     accountButton.textContent = username;
-    accountButton.setAttribute('data-bs-toggle', ''); // Remove modal trigger
+    accountButton.setAttribute("data-bs-toggle", ""); // Remove modal trigger
 
-    const modal = document.getElementById('accountModal');
+    const modal = document.getElementById("accountModal");
     const modalInstance = bootstrap.Modal.getInstance(modal);
     modalInstance.hide();
   }
 });
 
-// Signup Form Submission
-const signupButton = document.getElementById("signupButton");
-const signupForm = document.getElementById("signupForm");
-
+// Signup Form Submission with Success Message
 signupButton.addEventListener("click", async function () {
   const formData = new FormData(signupForm);
 
@@ -104,7 +104,7 @@ signupButton.addEventListener("click", async function () {
 
     const result = await response.json();
     if (result.success) {
-      alert("Signup successful! Please log in.");
+      showSuccessMessage("Sign up successfully!");
       toggleForms("login");
     } else {
       alert(result.message || "Signup failed. Please try again.");
@@ -114,3 +114,25 @@ signupButton.addEventListener("click", async function () {
     alert("An error occurred. Please try again later.");
   }
 });
+
+// Function to display a success message at the top of the page
+function showSuccessMessage(message) {
+  const messageContainer = document.createElement("div");
+  messageContainer.style.position = "fixed";
+  messageContainer.style.top = "0";
+  messageContainer.style.left = "0";
+  messageContainer.style.width = "100%";
+  messageContainer.style.backgroundColor = "#28a745";
+  messageContainer.style.color = "#fff";
+  messageContainer.style.padding = "10px";
+  messageContainer.style.textAlign = "center";
+  messageContainer.style.zIndex = "9999";
+  messageContainer.textContent = message;
+
+  document.body.appendChild(messageContainer);
+
+  // Remove the message after 4 seconds
+  setTimeout(() => {
+    messageContainer.remove();
+  }, 4000);
+}
