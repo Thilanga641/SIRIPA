@@ -14,7 +14,17 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.alert-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
 /*Login Section*/
 @media (max-width: 767.98px) {
   .nav__action__btn {
@@ -255,7 +265,9 @@ nav {
 }
 
 .nav__links {
+  font-size: large;
   position: absolute;
+  margin-top: 2rem;
   right: 1rem;
   top: 68px;
   width: calc(100% - 2rem);
@@ -265,7 +277,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   background-color: rgba(10, 30, 39, 0.8);
   border-radius: 10px;
   display: none;
