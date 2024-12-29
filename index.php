@@ -142,7 +142,7 @@ session_start();
           </div>
         </div>
         <div class="about__image about__image-2" id="equipment">
-          <img src="assets/3.png" alt="about" />
+          <img src="assets/3.jpg" alt="about" />
         </div>
         <div class="about__content about__content-2">
           <h3 class="section__subheader">Kuruwita Erathna Road</h3>
@@ -180,7 +180,7 @@ session_start();
           </div>
         </div>
         <div class="about__image about__image-4" id="equipment">
-          <img src="assets/4.png" alt="about" />
+          <img src="assets/4.jpg" alt="about" />
         </div>
         <div class="about__content about__content-4">
           <h3 class="section__subheader">Deraniyagala Maliboda Road</h3>
