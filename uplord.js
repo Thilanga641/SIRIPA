@@ -151,3 +151,63 @@ function iconSelector(type){
     var splitType = (type.split('/')[0] == 'application') ? type.split('/')[1] : type.split('/')[0];
     return splitType + '.png'
 }
+
+
+
+
+
+
+
+
+
+document.querySelector('.file-selector-input').addEventListener('change', async (event) => {
+    const files = event.target.files;
+    const formData = new FormData();
+
+    for (const file of files) {
+        formData.append('files[]', file);
+    }
+
+    try {
+        const response = await fetch('uplord_DB.php', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        if (result.success) {
+            fetchUploadedFiles();
+        } else {
+            console.error(result.message);
+        }
+    } catch (error) {
+        console.error('Error uploading files:', error);
+    }
+});
+
+async function fetchUploadedFiles() {
+    try {
+        const response = await fetch('uplord_DB.php');
+        const result = await response.json();
+
+        if (result.success) {
+            const listSection = document.querySelector('.list');
+            listSection.innerHTML = ''; // Clear previous list
+
+            result.files.forEach(file => {
+                const listItem = document.createElement('div');
+                listItem.innerHTML = `<a href="${file.filepath}" target="_blank">${file.filename}</a>`;
+                listSection.appendChild(listItem);
+            });
+        } else {
+            console.error(result.message);
+        }
+    } catch (error) {
+        console.error('Error fetching files:', error);
+    }
+}
+
+// Fetch files on page load
+fetchUploadedFiles();
