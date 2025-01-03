@@ -267,7 +267,7 @@ Another special thing here is the presence of very large fruit orchards.
           <h4>More on Ours</h4>
           <ul class="footer__links">
             <li><a href="#">my Details</a></li>
-            <li><a href="https://sltc.ac.lk/">SLTC Uni</a></li>
+            <li><a href="https://www.sjp.ac.lk/">Japura Uni</a></li>
             <li><a href="#">Other</a></li>
           </ul>
         </div>
